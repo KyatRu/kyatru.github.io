@@ -74,7 +74,7 @@ body {
 	padding: 0;
 }
 
-.header-nav__item {
+.circle {
 	height: 40px;
 	width: 40px;
 	display: flex;
@@ -85,7 +85,7 @@ body {
 	background-color: #FF3E79;
 }
 
-.header-nav__item:nth-child(-n+3) {
+.circle:nth-child(-n+3) {
 	display: none;
 }
 
@@ -172,7 +172,7 @@ body {
 
 /* основной контент */
 
-.main__content {
+.post {
 	margin: 0 16px;
 	padding: 0;
 	font-family: TT Lakes Medium;
@@ -182,36 +182,42 @@ body {
 	color: #1B1C21;
 }
 
-.main__content-txt {
+.post__txt {
 	margin: 24px 0;
 	padding: 0;
 	display: none;
 }
 
-.main__content-txt:first-child {
+.post__txt:first-child {
 	display: block;
 }
 
-.main__btn {
+.read-more {
+	padding: 0;
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	gap: 8px;
+	border: 0;
+	background: transparent;
 	font-family: TT Lakes Medium;
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.2px;
 	color: #1B1C21;
-	background-color: transparent;
-	border: none;
-	text-align: center;
 }
 
-.main__btn--svg {
-	margin-right: 16px;
+.read-more__img {
+	width: 24px;
+	height: 24px;
+	background: no-repeat center url(../source/btn-chitat.svg);
 }
 
-.main__img {
+.post-img {
 	width: 320px;
 	height: 176px;
 	margin: 24px 0;
-	background: no-repeat url(../source/img-post-xs.jpg);
+	
 }
 
 /* планшет */
@@ -225,7 +231,7 @@ body {
 		gap: 20px;
 	}
 
-	.header-nav__item:nth-child(-n+3) {
+	.circle:nth-child(-n+3) {
 		display: flex;
 	}
 
@@ -241,27 +247,27 @@ body {
 		margin: 0 24px;
 	}
 
-	.main--flex {
+	.main__content {
 		display: flex;
 		align-items: start;
 		justify-content: space-between;
 	}
 
-	.main__content {
+	.post {
 		width: 319px;
 		line-height: 20px;
 	}
 
-	.main__content-txt:nth-child(2) {
+	.post__txt:nth-child(2) {
 		display: block;
 		margin-bottom: 10px;
 	}
 
-	.main__img {
+	.post-img {
 		width: 360px;
 		height: 208px;
 		margin-right: 24px;
-		background: no-repeat url(../source/img-post-sm.jpg);
+		
 	}
 }
 
@@ -282,23 +288,23 @@ body {
 		padding: 0 32px;
 	}
 
-	.support {
+	/* Кнопки */
+
+	.main__title-btn {
 		padding: 0 32px;
 		display: flex;
+		justify-content:center;
+		align-items: center;
 		gap: 32px;
-		list-style-type: none;
-		/* убирает маркер в списке */
 	}
 
-	.support__item {
+	.support {
 		display: flex;
-		justify-content: center;
+		justify-content:center;
 		align-items: center;
 		gap: 8px;
-		white-space: nowrap;
-	}
-
-	.support__name {
+		border: 0;
+		background: transparent;
 		font-family: TT Lakes Medium;
 		font-size: 16px;
 		line-height: 24px;
@@ -306,15 +312,12 @@ body {
 		color: #1B1C21;
 	}
 
-	.support__img {
-		height: 40px;
-		width: 40px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		border: 0;
-		border-radius: 50%;
-		background-color: #FF3E79;
+	.support .support__img1 {
+		background: #FF3E79 no-repeat center url(../source/support.svg);
+	}
+
+	.support .support__img2 {
+		background: #FF3E79 no-repeat center url(../source/search.svg);
 	}
 
 	.main__list {
@@ -326,30 +329,30 @@ body {
 		margin: 0 32px;
 	}
 
-	.main--flex {
+	.main__content {
 		display: flex;
 		justify-content:space-between;
 	}
 
-	.main__content {
+	.post {
 		width: 45%;
 		margin-left: 34px;
 	}
 
-	.main__content-txt:nth-child(2) {
+	.post__txt:nth-child(2) {
 		display: none;
 	}
 
-	.main__content-txt:nth-child(3) {
+	.post__txt:nth-child(3) {
 		display: block;
 		margin-bottom: 10px;
 	}
 
-	.main__img {
+	.post-img {
 		min-width: 532px;
 		min-height: 307px;
 		margin-right: 24px;
-		background: no-repeat url(../source/img-post-md.jpg);
+		
 	}
 
 }
