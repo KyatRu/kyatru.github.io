@@ -190,9 +190,16 @@ menu {
 	display: flex;
    gap: 7px;
    padding-bottom: 16px;
+	list-style-type: none;
 }
 
-.footer__lang button {
+.lang {
+	position: absolute;
+   z-index: -1;
+   opacity: 0;
+}
+
+.footer__lang label {
 	margin: 0;
    padding: 0;
    border: none;
@@ -205,8 +212,8 @@ menu {
 	background-color: transparent;
 }
 
-.footer__lang button:hover,
-.footer__lang button:active,
-.footer__lang button:focus {
+.footer__lang input[type=radio]:checked + label,
+.footer__lang label:hover {
 	color: #7E7E82;
 }
+
